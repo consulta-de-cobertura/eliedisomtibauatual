@@ -8,7 +8,9 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ onOpenModal }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleClick = () => {
-    window.open('https://meuu.link/internet-federal-associados', '_blank');
+    const message = 'Olá, estou vindo do site da Federal Associados. Poderia me ajudar com mais informações?';
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/5584981321396?text=${encodedMessage}`, '_blank');
   };
 
   return (
